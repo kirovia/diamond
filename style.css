@@ -1,0 +1,68 @@
+::-webkit-scrollbar {
+    display: none;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: Verdana;
+  font-size: 16px;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section div {
+  height: 60vmin;
+  width: 60vmin;
+  transform: rotate(45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section div p {
+  transform: rotate(-45deg);
+  font-size: 1.5rem;
+  color: transparent;
+  transition: all 2s;
+}
+section div:hover p {
+  color: rgba(0, 0, 0, 0.25);
+}
+.overlay {
+  height: 100vh;
+  width: 100vw;
+  background: transparent;
+  position: fixed;
+  border-top: 8rem solid black;
+  border-bottom: 8rem solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#section-1 {
+  background: linear-gradient(to bottom, rgba(200, 0, 0, 1), rgba(150, 0, 50, 1));
+}
+#section-1 div {
+  background: linear-gradient(to top left, rgba(200, 0, 0, 1), rgba(150, 0, 50, 1));
+}
+#section-2 {
+  background: linear-gradient(to bottom, rgba(150, 0, 50, 1), rgba(100, 0, 100, 1));
+}
+#section-2 div {
+  background: linear-gradient(to top left, rgba(150, 0, 50, 1), rgba(100, 0, 100, 1));
+}
+#section-3 {
+  background: linear-gradient(to bottom, rgba(100, 0, 100, 1), rgba(50, 0, 150, 1));
+}
+#section-3 div {
+  background: linear-gradient(to top left, rgba(100, 0, 100, 1), rgba(50, 0, 150, 1));
+}
