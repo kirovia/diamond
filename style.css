@@ -1,3 +1,4 @@
+/* Default and Universal Styles */
 ::-webkit-scrollbar {
     display: none;
 }
@@ -5,7 +6,6 @@
   box-sizing: border-box;
 }
 html {
-  font-family: Verdana;
   font-size: 16px;
 }
 body {
@@ -27,6 +27,7 @@ section div {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 section div p {
   transform: rotate(-45deg);
@@ -37,7 +38,7 @@ section div p {
 section div:hover p {
   color: rgba(0, 0, 0, 0.25);
 }
-.overlay {
+#overlay {
   height: 100vh;
   width: 100vw;
   background: transparent;
@@ -47,6 +48,7 @@ section div:hover p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  user-select: none;
 }
 #section-1 {
   background: linear-gradient(to bottom, rgba(200, 0, 0, 1), rgba(150, 0, 50, 1));
@@ -65,4 +67,37 @@ section div:hover p {
 }
 #section-3 div {
   background: linear-gradient(to top left, rgba(100, 0, 100, 1), rgba(50, 0, 150, 1));
+}
+#section-4 {
+  background: linear-gradient(to bottom, rgba(50, 0, 150, 1), rgba(0, 0, 150, 1));
+}
+#section-4 div {
+  background: linear-gradient(to top left, rgba(50, 0, 150, 1), rgba(0, 0, 150, 1));
+}
+#section-5 {
+  background: linear-gradient(to bottom, rgba(0, 0, 150, 1), rgba(0, 0, 0, 1));
+}
+#section-5 div {
+  background: linear-gradient(to top left, rgba(0, 0, 150, 1), rgba(0, 0, 0, 1));
+}
+
+/* Background Colors */
+.bg-black {
+  background: rgba(0, 0, 0, 1) !important;
+}
+
+/* Animations */
+.box-grow {
+  animation: box-grow 1s;
+}
+
+@keyframes box-grow {
+  0% {
+    height: 10px;
+    width: 10px;
+  }
+  100% {
+    height: 1px;
+    width: 1px;
+  }
 }
